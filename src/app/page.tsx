@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from './page.module.css'
@@ -6,29 +6,19 @@ import styles from './page.module.css'
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 
+import TitleBar from '@/components/TitleBar';
+import StartTimePicker from '@/components/StartTimePicker';
+
+import BaseTimePicker from '@/components/BaseTimePicker';
 
 // const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <AppBar
-        // position="static"
-        sx={{
-          width: '100%',
-          background: 'linear-gradient(45deg, #2196f3 30%, #21cbf3 90%)',
-          boxShadow: '0 3px 5px 2px rgba(33, 203, 243, .30)',
-        }}
-      >
-        <Typography variant="h5" color="inherit"
-          sx={{
-            flex: 1,
-            padding: '0.5em',
-            textAlign: 'left'
-          }}>
-          teiji
-        </Typography>
-      </AppBar >
+      <TitleBar />
+      <StartTimePicker />
+      <BaseTimePicker />
       <div>
 
       </div>
