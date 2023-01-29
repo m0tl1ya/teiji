@@ -9,13 +9,13 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { useClockStore } from '@/lib/store';
 
 export default function StartTimePicker() {
-  const { time, setTime} = useClockStore();
+  const { startTime, setTime} = useClockStore();
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale={'ru'}>
       <TimePicker
         label="Basic example"
-        value={time}
+        value={startTime}
         onChange={(newValue) => {
           setTime(newValue);
         }}
