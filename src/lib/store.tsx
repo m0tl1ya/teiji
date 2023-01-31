@@ -9,7 +9,7 @@ interface ClockState {
 }
 
 export const useClockStore = create<ClockState>()((set) => ({
-  startTime: null,
+  startTime: dayjs(),
   breakTime: dayjs('01:00'),
   setTime: (value) => set((state) => ({ startTime: value })),
   setBreakTime: (value) => set((state) => ({ breakTime: value })),
