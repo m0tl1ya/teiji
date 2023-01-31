@@ -3,15 +3,15 @@ import { create } from 'zustand'
 
 interface ClockState {
   startTime: Dayjs | null
-  breakTime: Dayjs | null
+  baseTime: Dayjs | null
   setTime: (value: Dayjs | null) => void
   setBreakTime: (value: Dayjs | null) => void
 }
 
 export const useClockStore = create<ClockState>()((set) => ({
   startTime: dayjs(),
-  breakTime: dayjs('01:00'),
+  baseTime: dayjs('01:00'),
   setTime: (value) => set((state) => ({ startTime: value })),
-  setBreakTime: (value) => set((state) => ({ breakTime: value })),
+  setBreakTime: (value) => set((state) => ({ baseTime: value })),
 }))
 

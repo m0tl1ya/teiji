@@ -8,7 +8,7 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { useClockStore } from '@/lib/store';
 
 export default function BaseTimePicker() {
-    const { breakTime, setBreakTime} = useClockStore();
+    const { baseTime: breakTime, setBreakTime} = useClockStore();
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale={'ru'}>
