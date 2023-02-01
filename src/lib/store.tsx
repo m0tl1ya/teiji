@@ -1,25 +1,26 @@
+"use client";
 import dayjs, { Dayjs } from 'dayjs';
 import { create } from 'zustand'
 
 interface ClockState {
-  startTime: Dayjs | null
-  baseTime: Dayjs | null
-  breakTime: Dayjs | null
-  finishTime: Dayjs | null
-  setTime: (value: Dayjs | null) => void
-  setBaseTime: (value: Dayjs | null) => void
-  setBreakTime: (value: Dayjs | null) => void
+  startTime: any | null
+  baseTime: any | null
+  breakTime: any | null
+  finishTime: any | null
+  setTime: (value: any | null) => void
+  setBaseTime: (value: any | null) => void
+  setBreakTime: (value: any | null) => void
   setFinishTime: () => void
 }
 
 export const useClockStore = create<ClockState>()((set) => ({
-  startTime: dayjs(),
-  baseTime: dayjs("07:45", "HH-mm"),
-  breakTime: dayjs("07:45", "HH-mm"),
+  startTime: null,
+  baseTime: "07:45",
+  breakTime: "01:00",
   finishTime: null,
-  setTime: (value) => set((state) => ({ startTime: value })),
-  setBaseTime: (value) => set((state) => ({ baseTime: value })),
-  setBreakTime: (value) => set((state) => ({ breakTime: value })),
+  setTime: (value) => set(() => ({ startTime: value })),
+  setBaseTime: (value) => set(() => ({ baseTime: value })),
+  setBreakTime: (value) => set(() => ({ breakTime: value })),
   setFinishTime: () => set((state) => ({ finishTime: state.startTime})),
 }))
 

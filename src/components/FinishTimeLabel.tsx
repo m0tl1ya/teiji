@@ -11,7 +11,8 @@ import { Input } from '@mui/material';
 
 const FinishTimeLabel: React.FC = () => {
 
-    const { finishTime, setFinishTime, setBreakTime } = useClockStore();
+    const { finishTime } = useClockStore();
+    const { setFinishTime } = useClockStore((state) => state);
     return (
         <Box
             component="form"
@@ -27,7 +28,11 @@ const FinishTimeLabel: React.FC = () => {
             >
                 Click
             </Button>
-            <TextField id="standard-basic" variant="standard" type={"time"} />
+            <TextField
+                id="standard-basic"
+                value={finishTime}
+                variant="standard"
+                type={"time"} />
         </Box>
     );
 }
