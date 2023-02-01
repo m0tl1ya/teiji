@@ -1,5 +1,3 @@
-"use client";
-import dayjs, { Dayjs } from 'dayjs';
 import { create } from 'zustand'
 
 interface ClockState {
