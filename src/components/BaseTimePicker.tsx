@@ -7,7 +7,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { useClockStore } from '@/lib/store';
 
-export default function BaseTimePicker() {
+const BaseTimePicker: React.FC = () => {
     const { baseTime, setBaseTime: setBreakTime } = useClockStore();
 
     return (
@@ -20,3 +20,5 @@ export default function BaseTimePicker() {
             variant="standard" type={"time"} />
     );
 }
+
+export default BaseTimePicker;

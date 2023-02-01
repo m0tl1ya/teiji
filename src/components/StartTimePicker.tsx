@@ -8,9 +8,9 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 
 import { useClockStore } from '@/lib/store';
 
-export default function StartTimePicker() {
+const StartTimePicker: React.FC = () => {
   const { startTime, setTime } = useClockStore();
-  
+
   return (
     <TextField
       id="standard-basic"
@@ -20,5 +20,6 @@ export default function StartTimePicker() {
       }}
       variant="standard" type={"time"} />
   );
-
 }
+
+export default StartTimePicker;

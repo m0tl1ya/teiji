@@ -9,7 +9,7 @@ import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { useClockStore } from '@/lib/store';
 import { Input } from '@mui/material';
 
-export default function FinishTimeLabel() {
+const FinishTimeLabel: React.FC = () => {
 
     const { finishTime, setFinishTime, setBreakTime } = useClockStore();
     return (
@@ -31,3 +31,7 @@ export default function FinishTimeLabel() {
         </Box>
     );
 }
+
+
+export default FinishTimeLabel;
+
