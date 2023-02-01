@@ -7,13 +7,13 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { useClockStore } from '@/lib/store';
 
-export default function BaseTimePicker() {
-    const { baseTime, setBaseTime: setBreakTime } = useClockStore();
+export default function BreakTimePicker() {
+    const { breakTime, setBreakTime } = useClockStore();
 
     return (
         <TextField
             id="standard-basic"
-            value={baseTime}
+            value={breakTime}
             onChange={(newValue) => {
                 setBreakTime(newValue);
             }}
