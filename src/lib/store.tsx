@@ -1,5 +1,7 @@
 import { create } from 'zustand'
 
+import { addTime } from './calculateTime'
+
 interface ClockState {
   startTime: any | null
   baseTime: any | null
@@ -12,13 +14,14 @@ interface ClockState {
 }
 
 export const useClockStore = create<ClockState>()((set) => ({
-  startTime: null,
+  startTime: "09:00",
   baseTime: "07:45",
   breakTime: "01:00",
   finishTime: null,
   setTime: (value) => set(() => ({ startTime: value })),
   setBaseTime: (value) => set(() => ({ baseTime: value })),
   setBreakTime: (value) => set(() => ({ breakTime: value })),
-  setFinishTime: () => set((state) => ({ finishTime: state.startTime})),
+  setFinishTime: () => set((state) => ({ finishTime: addTime(state.startTime, 
+    state.baseTime, state.breakTime)})),
 }))
 
