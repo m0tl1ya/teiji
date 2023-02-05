@@ -3,7 +3,7 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import { useClockStore } from '@/lib/store';
 
-const BreakTimePicker: React.FC = () =>  {
+const BreakTimeInput: React.FC = () =>  {
     const { breakTime } = useClockStore();
     const { setBreakTime } = useClockStore((state) => state);
 
@@ -18,4 +18,4 @@ const BreakTimePicker: React.FC = () =>  {
     );
 }
 
-export default BreakTimePicker;
+export default BreakTimeInput;

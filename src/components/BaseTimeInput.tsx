@@ -3,7 +3,7 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import { useClockStore } from '@/lib/store';
 
-const BaseTimePicker: React.FC = () => {
+const BaseTimeInput: React.FC = () => {
     const { baseTime } = useClockStore();
     const { setBaseTime } = useClockStore((state) => state);
 
@@ -18,4 +18,4 @@ const BaseTimePicker: React.FC = () => {
     );
 }
 
-export default BaseTimePicker;
+export default BaseTimeInput;

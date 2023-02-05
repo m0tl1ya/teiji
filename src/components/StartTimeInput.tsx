@@ -3,7 +3,7 @@ import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import { useClockStore } from '@/lib/store';
 
-const StartTimePicker: React.FC = () => {
+const StartTimeInput: React.FC = () => {
   const { startTime } = useClockStore();
   const { setTime } = useClockStore((state) => state);
 
@@ -19,4 +19,4 @@ const StartTimePicker: React.FC = () => {
   );
 }
 
-export default StartTimePicker;
+export default StartTimeInput;

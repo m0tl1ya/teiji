@@ -7,9 +7,9 @@ import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 
 import TitleBar from '@/components/TitleBar';
-import StartTimePicker from '@/components/StartTimePicker';
-import BaseTimePicker from '@/components/BaseTimePicker';
-import BreakTimePicker from '@/components/BreakTimePicker';
+import StartTimeInput from '@/components/StartTimeInput';
+import BaseTimeInput from '@/components/BaseTimeInput';
+import BreakTimeInput from '@/components/BreakTimeInput';
 import FinishTimeLabel from '@/components/FinishTimeLabel';
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -18,9 +18,9 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <TitleBar />
-      <StartTimePicker />
-      <BaseTimePicker />
-      <BreakTimePicker />
+      <StartTimeInput />
+      <BaseTimeInput />
+      <BreakTimeInput />
       <FinishTimeLabel />
       <div>
 
